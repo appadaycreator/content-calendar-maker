@@ -3,7 +3,7 @@
   "short_name": "content-cale",
   "start_url": "/content-calendar-maker/",
   "display": "standalone",
-  "background_color": "#6366f1",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "scope": "/content-calendar-maker/"
 }
