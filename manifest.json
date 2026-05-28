@@ -1,8 +1,9 @@
 {
   "name": "Content Calendar Maker",
   "short_name": "content-cale",
-  "start_url": "/",
+  "start_url": "/content-calendar-maker/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/content-calendar-maker/"
 }
