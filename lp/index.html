@@ -42,10 +42,10 @@ a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border:none;border-radius:999px;cursor:pointer;transition:transform .15s,box-shadow .15s;font-family:inherit}
-.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-d));color:#fff;padding:15px 30px;font-size:16px;box-shadow:0 10px 24px rgba(236,72,153,.35)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(236,72,153,.45)}
-.btn-ghost{background:#fff;color:var(--primary-d);padding:14px 28px;font-size:16px;border:2px solid var(--line)}
-.btn-ghost:hover{border-color:var(--primary)}
+.btn-primary{background:linear-gradient(135deg,#fb7185,var(--accent-d));color:#fff;padding:18px 38px;font-size:17px;box-shadow:0 14px 32px rgba(236,72,153,.5)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(236,72,153,.6)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;padding:17px 30px;font-size:16px;border:2px solid rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.24);border-color:#fff}
 .btn-nav{background:linear-gradient(135deg,var(--primary),var(--primary-d));color:#fff;padding:10px 22px;font-size:14px;box-shadow:0 6px 16px rgba(99,102,241,.3)}
 
 /* ── Header ── */
@@ -59,34 +59,47 @@ img{display:block;max-width:100%}
 @media(max-width:860px){.nav a:not(.btn-nav){display:none}}
 
 /* ── Hero ── */
-.hero{position:relative;background:linear-gradient(160deg,#eef0ff 0%,#f7f0fb 55%,#fdeef6 100%);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center;opacity:.10}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:72px 0 80px}
-.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--primary-d);font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(99,102,241,.12)}
-.hero h1{font-size:48px;line-height:1.2;font-weight:800;margin:22px 0 0;letter-spacing:-.5px}
-.hero h1 .hl{background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hero .lead{font-size:18px;color:#475569;margin:18px 0 24px;font-weight:500}
+.hero{position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(1100px 520px at 82% -12%, rgba(129,140,248,.55), transparent 62%),
+    radial-gradient(900px 520px at 6% 118%, rgba(236,72,153,.40), transparent 58%),
+    linear-gradient(150deg,#4f46e5 0%,#6d5ae0 42%,#8b5cf6 70%,#a855f7 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center;opacity:.14;mix-blend-mode:luminosity}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1.08fr;gap:48px;align-items:center;padding:84px 0 96px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.30);color:#fff;font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;backdrop-filter:blur(6px);box-shadow:0 4px 14px rgba(30,27,75,.25)}
+.hero h1{font-size:54px;line-height:1.16;font-weight:800;margin:22px 0 0;letter-spacing:-.5px;color:#fff;text-shadow:0 4px 22px rgba(30,27,75,.35)}
+.hero h1 .hl{background:linear-gradient(120deg,#fcd34d,#fbcfe8 55%,#a5f3fc);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .lead{font-size:18px;color:rgba(255,255,255,.92);margin:18px 0 24px;font-weight:500}
 .checks{display:flex;flex-direction:column;gap:12px;margin-bottom:30px}
-.checks li{list-style:none;display:flex;align-items:center;gap:11px;font-size:15px;font-weight:600;color:#334155}
-.checks .ck{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#34d399,#10b981);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+.checks li{list-style:none;display:flex;align-items:center;gap:11px;font-size:15px;font-weight:600;color:#fff}
+.checks .ck{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#34d399,#10b981);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;box-shadow:0 4px 12px rgba(16,185,129,.4)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:36px;padding:52px 0}.hero h1{font-size:36px}}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:36px;padding:52px 0 64px}.hero h1{font-size:38px}}
 
 /* Hero mockup */
 .mock{position:relative}
-.mock-card{background:#fff;border-radius:20px;box-shadow:0 24px 60px rgba(79,70,229,.20);padding:18px;border:1px solid #eef0ff}
-.mock-card .mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.mock-card .mh b{font-size:15px}
-.mock-card .mh span{font-size:11px;color:var(--accent);font-weight:700;background:#fdeef6;padding:3px 9px;border-radius:999px}
-.mini-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
-.mini-cal .d{aspect-ratio:1;border-radius:7px;background:#f4f5ff;display:flex;align-items:flex-start;justify-content:flex-end;padding:4px;font-size:9px;color:#94a3b8;font-weight:600}
-.mini-cal .d.p1{background:linear-gradient(135deg,#e0e7ff,#c7d2fe)}
-.mini-cal .d.p2{background:linear-gradient(135deg,#fce7f3,#fbcfe8)}
-.mini-cal .d.p3{background:linear-gradient(135deg,#dcfce7,#bbf7d0)}
-.mini-cal .d.p4{background:linear-gradient(135deg,#fef3c7,#fde68a)}
-.platforms{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.platforms span{width:40px;height:40px;border-radius:11px;background:#fff;box-shadow:0 6px 16px rgba(30,41,59,.10);display:flex;align-items:center;justify-content:center;font-size:19px}
-.bot{position:absolute;right:-6px;bottom:-26px;width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:38px;box-shadow:0 14px 30px rgba(99,102,241,.4);border:4px solid #fff}
+.mock-card{background:#fff;border-radius:24px;box-shadow:0 40px 90px rgba(30,27,75,.45);padding:24px;border:1px solid rgba(255,255,255,.6)}
+.mock-card .mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.mock-card .mh b{font-size:18px;color:var(--ink)}
+.mock-card .mh span{font-size:12px;color:#fff;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent-d));padding:5px 12px;border-radius:999px;box-shadow:0 6px 16px rgba(236,72,153,.35)}
+.wk{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}
+.wk span{text-align:center;font-size:11px;font-weight:700;color:#94a3b8}
+.wk span:first-child{color:#ef4444}.wk span:last-child{color:#3b82f6}
+.mini-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.mini-cal .d{aspect-ratio:1;border-radius:9px;background:#f4f5ff;display:flex;align-items:flex-start;justify-content:flex-end;padding:5px;font-size:11px;color:#94a3b8;font-weight:700}
+.mini-cal .d.p1{background:linear-gradient(135deg,#c7d2fe,#a5b4fc);color:#3730a3}
+.mini-cal .d.p2{background:linear-gradient(135deg,#fbcfe8,#f9a8d4);color:#9d174d}
+.mini-cal .d.p3{background:linear-gradient(135deg,#bbf7d0,#86efac);color:#166534}
+.mini-cal .d.p4{background:linear-gradient(135deg,#fde68a,#fcd34d);color:#92400e}
+.ai-sug{margin-top:16px;background:#f7f7ff;border:1px solid #eceaff;border-radius:14px;padding:12px 14px}
+.ai-sug .ah{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;color:var(--primary-d);margin-bottom:9px}
+.ai-sug .ah .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+.ai-sug ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ai-sug li{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:600;color:#475569}
+.ai-sug li .ei{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.platforms{display:flex;gap:9px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.platforms span{width:38px;height:38px;border-radius:11px;background:#fff;box-shadow:0 6px 16px rgba(30,41,59,.12);display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid #f1f1fb}
+.bot{position:absolute;right:-10px;bottom:-28px;width:82px;height:82px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:40px;box-shadow:0 18px 38px rgba(99,102,241,.5);border:4px solid #fff}
 
 /* ── Feature strip ── */
 .strip{margin-top:-34px;position:relative;z-index:5;padding-bottom:10px}
@@ -139,10 +152,12 @@ section.block{padding:72px 0}
 @media(max-width:760px){.gallery{grid-template-columns:repeat(3,1fr)}}
 
 /* CTA band */
-.cta-band{background:linear-gradient(120deg,var(--primary),var(--accent));border-radius:26px;padding:56px 30px;text-align:center;color:#fff;box-shadow:0 24px 60px rgba(99,102,241,.32)}
-.cta-band h2{font-size:32px;font-weight:800;margin-bottom:12px}
-.cta-band p{font-size:16px;opacity:.95;margin-bottom:26px}
-.cta-band .btn{background:#fff;color:var(--accent-d);box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(120deg,#4f46e5,#8b5cf6 55%,var(--accent));border-radius:26px;padding:64px 30px;text-align:center;color:#fff;box-shadow:0 30px 70px rgba(99,102,241,.42)}
+.cta-band::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.10);top:-140px;right:-90px}
+.cta-band h2{position:relative;font-size:36px;font-weight:800;margin-bottom:12px}
+.cta-band p{position:relative;font-size:16px;opacity:.95;margin-bottom:30px}
+.cta-band .btn{position:relative;background:#fff;color:var(--accent-d);padding:20px 48px;font-size:18px;box-shadow:0 16px 34px rgba(0,0,0,.22)}
+.cta-band .btn:hover{transform:translateY(-2px)}
 @media(max-width:760px){.cta-band h2{font-size:24px}}
 
 /* FAQ */
@@ -195,12 +210,22 @@ section.block{padding:72px 0}
       </div>
       <div class="mock">
         <div class="mock-card">
-          <div class="mh"><b>2025年6月の計画</b><span>AI提案</span></div>
+          <div class="mh"><b>2025年6月の計画</b><span>✨ AI自動生成</span></div>
+          <div class="wk"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
           <div class="mini-cal">
             <div class="d">1</div><div class="d p1">2</div><div class="d">3</div><div class="d p2">4</div><div class="d">5</div><div class="d p3">6</div><div class="d">7</div>
             <div class="d p1">8</div><div class="d">9</div><div class="d p4">10</div><div class="d">11</div><div class="d p2">12</div><div class="d">13</div><div class="d p3">14</div>
             <div class="d">15</div><div class="d p2">16</div><div class="d">17</div><div class="d p1">18</div><div class="d">19</div><div class="d p4">20</div><div class="d">21</div>
             <div class="d p3">22</div><div class="d">23</div><div class="d p2">24</div><div class="d">25</div><div class="d p1">26</div><div class="d">27</div><div class="d p4">28</div>
+            <div class="d">29</div><div class="d p2">30</div><div class="d" style="opacity:.35">1</div><div class="d" style="opacity:.35">2</div><div class="d" style="opacity:.35">3</div><div class="d" style="opacity:.35">4</div><div class="d" style="opacity:.35">5</div>
+          </div>
+          <div class="ai-sug">
+            <div class="ah"><span class="dot"></span>AIのおすすめ投稿</div>
+            <ul>
+              <li><span class="ei" style="background:#e0e7ff">📝</span>月曜：ノウハウ系ブログ記事</li>
+              <li><span class="ei" style="background:#fce7f3">📷</span>水曜：ビフォーアフター投稿（Instagram）</li>
+              <li><span class="ei" style="background:#dcfce7">🎥</span>金曜：ショート動画（TikTok / Reels）</li>
+            </ul>
           </div>
           <div class="platforms">
             <span>𝕏</span><span>📷</span><span>▶️</span><span>🎵</span><span>📘</span><span>✍️</span>
@@ -254,10 +279,10 @@ section.block{padding:72px 0}
       <p>発信を続けるすべてのクリエイター・担当者の計画づくりに</p>
     </div>
     <div class="aud-grid">
-      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_02.jpg')"></div><div class="bd"><b>SNS運用・インフルエンサー</b><p>毎日の投稿ネタ切れを防ぎ、一貫したペースで発信したい方に。<br><span class="chip">投稿の習慣化</span></p></div></div>
-      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_03.jpg')"></div><div class="bd"><b>ブログ・メディア運営</b><p>更新頻度を保ちながらSEOを意識した記事計画を立てたい方に。<br><span class="chip">検索流入UP</span></p></div></div>
-      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_04.jpg')"></div><div class="bd"><b>企業・マーケター</b><p>チームでコンテンツ計画を共有し、抜け漏れなく運用したい方に。<br><span class="chip">チーム運用</span></p></div></div>
-      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_05.jpg')"></div><div class="bd"><b>コンテンツクリエイター</b><p>複数プラットフォームの投稿を一元管理して効率化したい方に。<br><span class="chip">マルチ展開</span></p></div></div>
+      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_07.jpg')"></div><div class="bd"><b>SNS運用・インフルエンサー</b><p>毎日の投稿ネタ切れを防ぎ、一貫したペースで発信したい方に。<br><span class="chip">投稿の習慣化</span></p></div></div>
+      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_14.jpg')"></div><div class="bd"><b>ブログ・メディア運営</b><p>更新頻度を保ちながらSEOを意識した記事計画を立てたい方に。<br><span class="chip">検索流入UP</span></p></div></div>
+      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_08.jpg')"></div><div class="bd"><b>企業・マーケター</b><p>チームでコンテンツ計画を共有し、抜け漏れなく運用したい方に。<br><span class="chip">チーム運用</span></p></div></div>
+      <div class="aud"><div class="ph" style="background-image:url('../assets/photos/photo_16.jpg')"></div><div class="bd"><b>コンテンツクリエイター</b><p>複数プラットフォームの投稿を一元管理して効率化したい方に。<br><span class="chip">マルチ展開</span></p></div></div>
     </div>
   </div>
 </section>
@@ -283,18 +308,18 @@ section.block{padding:72px 0}
 <section class="block" style="padding-top:0">
   <div class="wrap">
     <div class="gallery">
-      <img src="../assets/photos/photo_07.jpg" alt="コンテンツ制作の様子" loading="lazy">
-      <img src="../assets/photos/photo_08.jpg" alt="SNS運用" loading="lazy">
-      <img src="../assets/photos/photo_09.jpg" alt="ブログ執筆" loading="lazy">
-      <img src="../assets/photos/photo_10.jpg" alt="チームミーティング" loading="lazy">
-      <img src="../assets/photos/photo_11.jpg" alt="動画編集" loading="lazy">
-      <img src="../assets/photos/photo_12.jpg" alt="マーケティング分析" loading="lazy">
-      <img src="../assets/photos/photo_13.jpg" alt="投稿計画" loading="lazy">
-      <img src="../assets/photos/photo_14.jpg" alt="撮影風景" loading="lazy">
-      <img src="../assets/photos/photo_15.jpg" alt="スマホ運用" loading="lazy">
-      <img src="../assets/photos/photo_16.jpg" alt="デスクワーク" loading="lazy">
-      <img src="../assets/photos/photo_17.jpg" alt="コンテンツ企画" loading="lazy">
-      <img src="../assets/photos/photo_18.jpg" alt="クリエイティブ作業" loading="lazy">
+      <img src="../assets/photos/photo_09.jpg" alt="コンテンツ制作の様子" loading="lazy">
+      <img src="../assets/photos/photo_10.jpg" alt="SNS運用" loading="lazy">
+      <img src="../assets/photos/photo_11.jpg" alt="ブログ執筆" loading="lazy">
+      <img src="../assets/photos/photo_12.jpg" alt="チームミーティング" loading="lazy">
+      <img src="../assets/photos/photo_13.jpg" alt="動画編集" loading="lazy">
+      <img src="../assets/photos/photo_15.jpg" alt="マーケティング分析" loading="lazy">
+      <img src="../assets/photos/photo_17.jpg" alt="投稿計画" loading="lazy">
+      <img src="../assets/photos/photo_18.jpg" alt="撮影風景" loading="lazy">
+      <img src="../assets/photos/photo_19.jpg" alt="スマホ運用" loading="lazy">
+      <img src="../assets/photos/photo_20.jpg" alt="デスクワーク" loading="lazy">
+      <img src="../assets/photos/photo_21.jpg" alt="コンテンツ企画" loading="lazy">
+      <img src="../assets/photos/photo_22.jpg" alt="クリエイティブ作業" loading="lazy">
     </div>
   </div>
 </section>

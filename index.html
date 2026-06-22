@@ -59,13 +59,17 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .app-nav a:hover { color: #6366F1; }
         .app-nav .cta { background: linear-gradient(135deg,#EC4899,#db2777); color: #fff; padding: 9px 20px; border-radius: 999px; box-shadow: 0 6px 16px rgba(236,72,153,.3); }
         @media (max-width: 640px) { .app-nav a:not(.cta) { display: none; } }
-        .hero-band { background: linear-gradient(160deg,#eef0ff,#f7f0fb 60%,#fdeef6); position: relative; overflow: hidden; }
-        .hero-band::before { content:""; position:absolute; inset:0; background-image:url('assets/photos/photo_01.jpg'); background-size:cover; background-position:center; opacity:.12; }
-        .hero-band .hb { position: relative; max-width: 1000px; margin: 0 auto; padding: 40px 18px 34px; text-align: center; }
-        .hero-band .pill { display:inline-flex; align-items:center; gap:7px; background:#fff; border:1px solid #e9e8ff; color:#4f46e5; font-size:12px; font-weight:700; padding:6px 14px; border-radius:999px; box-shadow:0 4px 12px rgba(99,102,241,.12); }
-        .hero-band h1 { font-size: 30px; font-weight: 800; margin: 16px 0 8px; letter-spacing:-.5px; color:#1e293b; }
-        .hero-band h1 .hl { background:linear-gradient(120deg,#6366F1,#EC4899); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-        .hero-band p { font-size: 14px; color: #475569; font-weight: 500; }
+        .hero-band { position: relative; overflow: hidden; color:#fff;
+          background:
+            radial-gradient(900px 420px at 84% -20%, rgba(129,140,248,.55), transparent 62%),
+            radial-gradient(700px 420px at 4% 130%, rgba(236,72,153,.40), transparent 58%),
+            linear-gradient(150deg,#4f46e5 0%,#6d5ae0 45%,#8b5cf6 72%,#a855f7 100%); }
+        .hero-band::before { content:""; position:absolute; inset:0; background-image:url('assets/photos/photo_01.jpg'); background-size:cover; background-position:center; opacity:.14; mix-blend-mode:luminosity; }
+        .hero-band .hb { position: relative; max-width: 1000px; margin: 0 auto; padding: 44px 18px 38px; text-align: center; }
+        .hero-band .pill { display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.30); color:#fff; font-size:12px; font-weight:700; padding:6px 14px; border-radius:999px; backdrop-filter:blur(6px); }
+        .hero-band h1 { font-size: 30px; font-weight: 800; margin: 16px 0 8px; letter-spacing:-.5px; color:#fff; text-shadow:0 3px 18px rgba(30,27,75,.35); }
+        .hero-band h1 .hl { background:linear-gradient(120deg,#fcd34d,#fbcfe8 55%,#a5f3fc); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+        .hero-band p { font-size: 14px; color: rgba(255,255,255,.92); font-weight: 500; }
         @media (max-width: 480px){ .hero-band h1 { font-size: 23px; } }
         .container { max-width: 800px; margin: 0 auto; padding: 16px; }
         .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 16px; }
